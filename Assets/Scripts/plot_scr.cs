@@ -16,7 +16,6 @@ public class plot_scr : MonoBehaviour {
 		growth = 0;
 		for(int i = 0; i < 8; i++) {
 			string path = "Materials/element" + i.ToString();
-			Debug.Log(path);
 			fertilityMaterials[i] =  Resources.Load(path, typeof(Material)) as Material;
 		}
 	}

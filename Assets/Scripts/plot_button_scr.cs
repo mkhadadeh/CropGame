@@ -41,7 +41,5 @@ public class plot_button_scr : MonoBehaviour {
 			Debug.Log("Harvest");
 			int type = plot.Harvest();
 		}
-
 	}
-
 }
