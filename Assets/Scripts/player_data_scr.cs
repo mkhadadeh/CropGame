@@ -9,7 +9,7 @@ public class player_data_scr : MonoBehaviour {
 	public int fertilizer; // 0 for no fertilizer, 1 for natural, 2 for artificial
 	// Use this for initialization
 	void Start () {
-		holding_state = NOTHING;
+		holding_state = State.NOTHING;
 		seed_type = 0;
 	}
 

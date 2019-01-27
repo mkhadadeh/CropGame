@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class plot_button_scr : MonoBehaviour {
-	Public GameObject playerObj;
+	GameObject playerObj;
+	plot_scr plot;
 	// Use this for initialization
 	void Start () {
-
+		playerObj = GameObject.FindGameObjectWithTag("Player");
+		plot = GetComponent<plot_scr>();
 	}
 
 	// Update is called once per frame
@@ -15,16 +17,31 @@ public class plot_button_scr : MonoBehaviour {
 	}
 
 	public void OnPress() {
-		var playerScr = playerObj.GetComponent<Player_data_scr>();
-		if(playerScr.holding_state == playerScr.State.SEED) {
+		var playerScr = playerObj.GetComponent<player_data_scr>();
+
+		if(playerScr.holding_state == player_data_scr.State.SEED) {
 			// TODO: Implement planting
+			Debug.Log("Plant");
+			if(plot.Plant(playerScr.seed_type)) {
+				playerScr.seed_type = 0;
+				playerScr.holding_state = player_data_scr.State.NOTHING;
+			}
 		}
-		else if(playerScr.holding_state == playerScr.State.FERTILIZER) {
+		else if(playerScr.holding_state == player_data_scr.State.FERTILIZER) {
 			// TODO: Implement fertilizition
+			Debug.Log("Fertilize");
+			if(playerScr.fertilizer != 0) {
+					plot.Fertilize(playerScr.fertilizer == 1 ? false : true);
+			}
+			playerScr.holding_state = player_data_scr.State.NOTHING;
+			playerScr.fertilizer = 0;
 		}
 		else {
 			// TODO: Implement harvesting
+			Debug.Log("Harvest");
+			int type = plot.Harvest();
 		}
+
 	}
 
 }
