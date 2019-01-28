@@ -40,7 +40,7 @@ public class plot_scr : MonoBehaviour {
 		//TODO: Add plant model
 	}
 
-	void Grow() {
+	public void Grow() {
 		if(growth != seed_type && seed_type != 0 && fertilityScores[seed_type-1]) {
 			growth++;
 			if(growth == seed_type) {
