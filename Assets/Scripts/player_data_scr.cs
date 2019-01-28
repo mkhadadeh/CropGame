@@ -17,4 +17,22 @@ public class player_data_scr : MonoBehaviour {
 	void Update () {
 
 	}
+
+	public void Harvested(int code) {
+		Debug.Log(code);
+		switch(code) {
+			case 10:
+			case 20:
+			case 30:
+			//Get plant's worth of money
+				break;
+			case 1:
+			case 2:
+			case 3:
+			//Get seed of type plant
+				break;
+			default:
+				break;
+		}
+	}
 }

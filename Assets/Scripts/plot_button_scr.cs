@@ -20,7 +20,6 @@ public class plot_button_scr : MonoBehaviour {
 		var playerScr = playerObj.GetComponent<player_data_scr>();
 
 		if(playerScr.holding_state == player_data_scr.State.SEED) {
-			// TODO: Implement planting
 			Debug.Log("Plant");
 			if(plot.Plant(playerScr.seed_type)) {
 				playerScr.seed_type = 0;
@@ -28,7 +27,6 @@ public class plot_button_scr : MonoBehaviour {
 			}
 		}
 		else if(playerScr.holding_state == player_data_scr.State.FERTILIZER) {
-			// TODO: Implement fertilizition
 			Debug.Log("Fertilize");
 			if(playerScr.fertilizer != 0) {
 					plot.Fertilize(playerScr.fertilizer == 1 ? false : true);
@@ -40,6 +38,7 @@ public class plot_button_scr : MonoBehaviour {
 			// TODO: Implement harvesting
 			Debug.Log("Harvest");
 			int type = plot.Harvest();
+			playerScr.Harvested(type);
 		}
 	}
 }

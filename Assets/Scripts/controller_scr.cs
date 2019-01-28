@@ -16,9 +16,7 @@ public class controller_scr : MonoBehaviour {
 
 	public void NextDay() {
 		Debug.Log("Next!");
-		Debug.Log(PlotController.transform.childCount);
 		for(int i = 0; i < PlotController.transform.childCount; i++) {
-			Debug.Log(i);
 			PlotController.transform.GetChild(i).GetComponent<plot_scr>().Grow();
 		}
 	}
