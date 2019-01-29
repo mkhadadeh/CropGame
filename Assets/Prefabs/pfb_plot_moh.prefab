@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65765241930198076}
   - component: {fileID: 114895153990793868}
   m_Layer: 0
-  m_Name: pfb_plot
+  m_Name: pfb_plot_moh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -298,6 +298,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fertilityMaterials: []
   fertilityScores: 010101
+  seed_type: 0
+  growth: 0
+  current_plant: {fileID: 0}
 --- !u!114 &114928173980319496
 MonoBehaviour:
   m_ObjectHideFlags: 1

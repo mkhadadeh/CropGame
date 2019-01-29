@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4400555371356142}
   - component: {fileID: 114887178843108760}
   m_Layer: 5
-  m_Name: OVRGazePointer
+  m_Name: OVRGazePointer_moh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
