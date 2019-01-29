@@ -9,9 +9,9 @@ public class wrist_ui_controller : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
-	
+
 	// Update is called once per frame
 	void FixedUpdate () {
         if(CheckRayCollision())
@@ -27,10 +27,10 @@ public class wrist_ui_controller : MonoBehaviour {
         Debug.DrawLine(transform.position, transform.position + WristPosition);
         if (Physics.Raycast(transform.position, WristPosition, 1, 9))
         {
-            Debug.Log("Open Menu!");
+            //Debug.Log("Open Menu!");
             RayPermission = true;
         }
         return RayPermission;
-       
+
     }
 }
