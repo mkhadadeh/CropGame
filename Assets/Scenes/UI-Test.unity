@@ -1484,6 +1484,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1aa6cf6d09ec24a9bb215dd2e09cf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoneyReserve: 1000
+  AmountOfPlants: 000000000000000000000000
 --- !u!4 &906020007 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 481164, guid: ce816f2e6abb0504092c23ed9b970dfd,
@@ -1591,6 +1593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5856c1ca83a80d1468dc9956ef75291b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Customer: {fileID: 0}
 --- !u!1 &1202424171 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100012, guid: ce816f2e6abb0504092c23ed9b970dfd,
@@ -1763,6 +1766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98131fa67afdef54f9b478f7774a08de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WristDisplay: {fileID: 202092091}
 --- !u!1 &1449536299
 GameObject:
   m_ObjectHideFlags: 0
