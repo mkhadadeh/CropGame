@@ -5,7 +5,7 @@ using UnityEngine;
 public class wrist_ui_controller : MonoBehaviour {
 
     public GameObject WristDisplay;
-    private float RotationCondition = 45;
+    public player_inventory_values PlayerVals;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +18,8 @@ public class wrist_ui_controller : MonoBehaviour {
             WristDisplay.SetActive(true);
         else
             WristDisplay.SetActive(false);
+
+        UpdateValues();
 	}
 
     bool CheckRayCollision()
@@ -33,4 +35,21 @@ public class wrist_ui_controller : MonoBehaviour {
         return RayPermission;
 
     }
+
+    void UpdateValues()
+    {
+        for (int i = 1; i < 6; i++)
+        {
+            UnityEngine.UI.Text BtnText;
+            BtnText = transform.GetChild(0).GetChild(0).GetChild(i).gameObject.GetComponentInChildren<UnityEngine.UI.Text>();
+            BtnText.text = PlayerVals.AmountOfItems[i - 1].ToString();
+            Debug.Log(BtnText.text);
+        }
+    }
+
+    public void ButtonPress(int button)
+    {
+
+    }
+
 }

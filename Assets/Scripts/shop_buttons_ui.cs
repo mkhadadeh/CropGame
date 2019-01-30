@@ -5,7 +5,7 @@ using UnityEngine;
 public class shop_buttons_ui : MonoBehaviour
 {
     public player_inventory_values Customer;
-    int[] plantValues = { 50, 100, 250 };
+    int[] plantValues = { 50, 100, 250, 500, 1000 };
 
     public void ShopButtonPress(int targetPlant)
     {
@@ -24,7 +24,7 @@ public class shop_buttons_ui : MonoBehaviour
     private void BuyPlant(int plantNumber)
     {
         Customer.MoneyReserve -= plantValues[plantNumber];
-        Customer.AmountOfPlants[plantNumber] += 1;
+        Customer.AmountOfItems[plantNumber] += 1;
     }
 
 }
