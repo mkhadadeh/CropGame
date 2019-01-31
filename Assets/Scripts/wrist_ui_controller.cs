@@ -8,6 +8,8 @@ public class wrist_ui_controller : MonoBehaviour {
     public player_inventory_values PlayerVals;
     public player_data_scr PlayerHoldingVals;
 
+    string[] item_names = {"Plant 1","Plant 2","Plant 3","Natural Fertilizer","Artificial Fertilizer"};
+
 	// Use this for initialization
 	void Start () {
 
@@ -43,7 +45,7 @@ public class wrist_ui_controller : MonoBehaviour {
         {
             UnityEngine.UI.Text BtnText;
             BtnText = transform.GetChild(0).GetChild(0).GetChild(i).gameObject.GetComponentInChildren<UnityEngine.UI.Text>();
-            BtnText.text = PlayerVals.AmountOfItems[i - 1].ToString();
+            BtnText.text = item_names[i - 1] + ": " + PlayerVals.AmountOfItems[i - 1].ToString();
         }
         transform.GetChild(0).GetChild(0).GetChild(6).gameObject.GetComponentInChildren<UnityEngine.UI.Text>().text  = PlayerVals.MoneyReserve.ToString();
 
