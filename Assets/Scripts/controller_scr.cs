@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class controller_scr : MonoBehaviour {
 	public static int money;
@@ -82,7 +83,6 @@ public class controller_scr : MonoBehaviour {
 	}
 
 	public void GameOver() {
-		Debug.Log("GameOver");
-		//TODO: Implement Game Over
+		SceneManager.LoadScene("GameOver");
 	}
 }
