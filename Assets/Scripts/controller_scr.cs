@@ -10,11 +10,12 @@ public class controller_scr : MonoBehaviour {
 
 	public GameObject PlotController;
 	public enum RobotEvents {ROTATION_DEMAND, RIVER_MALFUNCTION, SHOP_SALE, A_FERT_PRICE_UP, TAX};
-	int plant_demand;
-	public enum TaxType {ALL_CROPS_LESS, ALL_SEEDS_MORE, ALL_FERTILIZERS_MORE};
+	public int plant_demand;
+	public enum TaxType {ALL_CROPS_LESS, ALL_SEEDS_MORE};
 	public Transform LifeEventUI;
-	RobotEvents current_event;
+	public RobotEvents current_event;
 	public Transform wrist_ui;
+	public TaxType tax;
 
 	bool wrist_ui_open;
 	public bool life_events_open;
@@ -61,6 +62,12 @@ public class controller_scr : MonoBehaviour {
 				PlotController.transform.GetChild(i).GetComponent<plot_scr>().Grow();
 			}
 			current_event = (RobotEvents)Random.Range(0,5);
+			if(current_event == RobotEvents.TAX) {
+				tax = (TaxType)Random.Range(0,2);
+			}
+			if(current_event == RobotEvents.ROTATION_DEMAND) {
+				plant_demand = Random.Range(1,4);
+			}
 			current_day++;
 			if(current_day == MAX_DAYS) {
 				current_state = GameState.END;

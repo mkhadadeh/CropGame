@@ -2094,6 +2094,11 @@ Prefab:
       propertyPath: buttonTexts.Array.data[4]
       value: 
       objectReference: {fileID: 229118956}
+    - target: {fileID: 114559266054772772, guid: f8f8bc6d89b207d4494c67a0228bcb69,
+        type: 2}
+      propertyPath: GameControl
+      value: 
+      objectReference: {fileID: 1481179633}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8f8bc6d89b207d4494c67a0228bcb69, type: 2}
   m_IsPrefabAsset: 0
@@ -3023,6 +3028,7 @@ MonoBehaviour:
   seed_type: 1
   fertilizer: 0
   vals: {fileID: 906020007}
+  GameControl: {fileID: 1481179633}
 --- !u!114 &906020007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4140,8 +4146,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlotController: {fileID: 616369265}
+  plant_demand: 0
   LifeEventUI: {fileID: 1570523336}
+  current_event: 0
   wrist_ui: {fileID: 652513391}
+  tax: 0
   life_events_open: 0
 --- !u!4 &1481179634
 Transform:
