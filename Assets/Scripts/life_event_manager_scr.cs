@@ -14,7 +14,7 @@ public class life_event_manager_scr : MonoBehaviour {
 	public Transform wrist_ui;
 	public player_inventory_values player_vals;
 
-	int river_button_pressed;
+	public int river_button_pressed;
 	public int cost_for_m3sg = 300;
 
 	public controller_scr GameController;
@@ -33,7 +33,7 @@ public class life_event_manager_scr : MonoBehaviour {
 		wrist_ui.GetChild(0).GetChild(0).gameObject.SetActive(false);
 		for(int i = 1; i < 6; i++) {
 			if(i == (int)current_event + 1) {
-				if(!LifeEventUI.GetChild(i).gameObject.activeSelf){
+				if(!LifeEventUI.GetChild(i).gameObject.activeSelf || current_event == RobotEvents.RIVER_MALFUNCTION){
 					if(i == 1) {
 						LifeEventUI.GetChild(i).GetChild(2).GetComponent<UnityEngine.UI.Text>().text = "Plant in demand: " + plant_demand.ToString();
 					}
@@ -81,6 +81,7 @@ public class life_event_manager_scr : MonoBehaviour {
 		}
 	}
 	public void ButtonPress(int i) {
+		Debug.Log(i);
 		if(i == 2 && player_vals.MoneyReserve >= cost_for_m3sg) {
 			player_vals.MoneyReserve -= cost_for_m3sg;
 			river_button_pressed = i;
