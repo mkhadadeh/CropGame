@@ -9,6 +9,8 @@ public class controller_scr : MonoBehaviour {
 	GameState current_state;
 	public GameObject PlotController;
 
+	public int artificial_fertilizer_uses;
+
 	public Transform LifeEventUI;
 	public Transform wrist_ui;
 
@@ -30,6 +32,7 @@ public class controller_scr : MonoBehaviour {
 		life_events_open = false;
 		wrist_ui_open = false;
 		dontGrow = false;
+		artificial_fertilizer_uses = 0;
 		LE_manager.SelectEvent();
 	}
 
@@ -54,7 +57,16 @@ public class controller_scr : MonoBehaviour {
 	public void NextDay() {
 		if(current_state == GameState.IN_GAME) {
 			for(int i = 0; i < PlotController.transform.childCount; i++) {
-				PlotController.transform.GetChild(i).GetComponent<plot_scr>().Grow();
+				if(!dontGrow) {
+					PlotController.transform.GetChild(i).GetComponent<plot_scr>().Grow();
+				}
+				else {
+					dontGrow = false;
+				}
+				if(PlotController.transform.GetChild(i).GetComponent<plot_scr>().art_fert_used) {
+					PlotController.transform.GetChild(i).GetComponent<plot_scr>().art_fert_used = false;
+					artificial_fertilizer_uses += 1;
+				}
 			}
 			LE_manager.SelectEvent();
 			current_day++;

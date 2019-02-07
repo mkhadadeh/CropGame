@@ -8,9 +8,11 @@ public class plot_scr : MonoBehaviour {
 	public int seed_type; // Of Plants 1, 2, 3. 0 for no plant
 	public int growth;
 	public GameObject current_plant;
+	public bool art_fert_used;
 
 	// Use this for initialization
 	void Start () {
+		art_fert_used = false;
 		fertilityMaterials = new Material[8];
 		seed_type = 0;
 		growth = 0;
@@ -71,6 +73,7 @@ public class plot_scr : MonoBehaviour {
 
 	public void Fertilize(bool artificial) {
 		if(artificial) {
+			art_fert_used = true;
 			fertilityScores[0] = true;
 			fertilityScores[1] = true;
 			fertilityScores[2] = true;

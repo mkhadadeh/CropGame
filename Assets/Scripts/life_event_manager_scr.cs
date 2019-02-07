@@ -17,6 +17,8 @@ public class life_event_manager_scr : MonoBehaviour {
 	int river_button_pressed;
 	public int cost_for_m3sg = 300;
 
+	public controller_scr GameController;
+
 	// Use this for initialization
 	void Start () {
 		river_button_pressed = 0;
@@ -46,6 +48,10 @@ public class life_event_manager_scr : MonoBehaviour {
 							}
 						}
 					}
+					if(i == 5) {
+						LifeEventUI.GetChild(i).GetChild(2).GetComponent<UnityEngine.UI.Text>().text = "The tax is on: " + (tax == TaxType.ALL_CROPS_LESS ? "Harvest sales":"Crop prices");
+					}
+					LifeEventUI.GetChild(i).gameObject.SetActive(true);
 				}
 			}	else {
 				if(LifeEventUI.GetChild(i).gameObject.activeSelf) {
@@ -55,7 +61,15 @@ public class life_event_manager_scr : MonoBehaviour {
 		}
 	}
 	public void SelectEvent() {
-		current_event = (RobotEvents)Random.Range(0,5);
+		if(GameController.artificial_fertilizer_uses < 3) {
+			current_event = (RobotEvents)Random.Range(0,4);
+			if(current_event == RobotEvents.A_FERT_PRICE_UP) {
+				current_event = (RobotEvents) ((int)current_event + 1);
+			}
+		}
+		else {
+			current_event = (RobotEvents)Random.Range(0,5);
+		}
 		if(current_event == RobotEvents.TAX) {
 			tax = (TaxType)Random.Range(0,2);
 		}

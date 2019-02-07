@@ -1496,6 +1496,81 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 394010877}
   m_CullTransparentMesh: 0
+--- !u!1 &400582509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 400582510}
+  - component: {fileID: 400582512}
+  - component: {fileID: 400582511}
+  m_Layer: 5
+  m_Name: Text (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &400582510
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 400582509}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 897969438}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -143, y: -167}
+  m_SizeDelta: {x: 500, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &400582511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 400582509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: 'The tax is on:'
+--- !u!222 &400582512
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 400582509}
+  m_CullTransparentMesh: 0
 --- !u!114 &415656056 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114928173980319496, guid: 277298a52a7db514f9e2f41573f645db,
@@ -2831,6 +2906,11 @@ Prefab:
       propertyPath: GameControl
       value: 
       objectReference: {fileID: 1481179633}
+    - target: {fileID: 114559266054772772, guid: f8f8bc6d89b207d4494c67a0228bcb69,
+        type: 2}
+      propertyPath: LE_Control
+      value: 
+      objectReference: {fileID: 1570523343}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8f8bc6d89b207d4494c67a0228bcb69, type: 2}
   m_IsPrefabAsset: 0
@@ -3642,7 +3722,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &897969438
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3654,6 +3734,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1436931341}
+  - {fileID: 1012266292}
+  - {fileID: 400582510}
   m_Father: {fileID: 1570523336}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3840,7 +3922,7 @@ MonoBehaviour:
   seed_type: 1
   fertilizer: 0
   vals: {fileID: 906020007}
-  GameControl: {fileID: 1481179633}
+  LE_Control: {fileID: 1570523343}
 --- !u!114 &906020007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4010,7 +4092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &979823916
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4032,6 +4114,96 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000036051184, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1012266291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1012266292}
+  - component: {fileID: 1012266294}
+  - component: {fileID: 1012266293}
+  m_Layer: 5
+  m_Name: Text (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1012266292
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1012266291}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 897969438}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -143, y: 120}
+  m_SizeDelta: {x: 500, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1012266293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1012266291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "You\u2019re sitting on your porch, enjoying the alien equivalent of a cold
+    lemonade. You sip lightly on the refreshing beverage in your moment of relaxation,
+    but as we all know, good things tend to come to an end. You see M3-SG mechanically
+    cantering down the road towards your place of dwelling, and you brace yourself
+    for the incoming barrage of programmed glee. \r\n\t\u201CGood day to you, farmer!\u201D
+    M3-SG blares as he arrives at the front of your farm. \u201CToday is a very special
+    day! And I\u2019m sure you know why, right?\u201D\r\n\tYou have no idea what is
+    special about today.\r\n\t\u201CWell, in case you wanted a brief reminder, today
+    marks the beginning of the period in our year where we give back to the environment
+    by replenishing the river! And to do this, we need your help! So, for the rest
+    of this harvest rotation, we are going to implement a 60% tax! All proceeds generated
+    from this tax will go towards the ecological restoration and protection of our
+    lovely river!\u201D And of course, we value the independence of our farmers, so
+    this tax is 100% MANDATORY.\u201D\r\n\tYou are genuinely surprised by this turn
+    of events, as M3-SG and the benefactors behind it are usually very lenient.\r\n\t\u201CWe
+    thank you for your service, have a wonderful day, farmer!\u201D\r\n"
+--- !u!222 &1012266294
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1012266291}
+  m_CullTransparentMesh: 0
 --- !u!1 &1022660839
 GameObject:
   m_ObjectHideFlags: 0
@@ -5234,7 +5406,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TAX
+  m_Text: Tax Implented
 --- !u!222 &1436931343
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5429,11 +5601,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlotController: {fileID: 616369265}
-  plant_demand: 0
+  artificial_fertilizer_uses: 0
   LifeEventUI: {fileID: 1570523336}
-  current_event: 0
   wrist_ui: {fileID: 652513391}
-  tax: 0
+  LE_manager: {fileID: 1570523343}
   life_events_open: 0
 --- !u!4 &1481179634
 Transform:
@@ -5850,6 +6021,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6fba1d25d48304e877c2cda4d3ec4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  current_event: 0
+  tax: 0
+  plant_demand: 0
+  LifeEventUI: {fileID: 1570523336}
+  wrist_ui: {fileID: 652513391}
+  player_vals: {fileID: 906020007}
+  cost_for_m3sg: 300
+  GameController: {fileID: 1481179633}
 --- !u!1 &1591795102 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1840295360834218, guid: 277298a52a7db514f9e2f41573f645db,
