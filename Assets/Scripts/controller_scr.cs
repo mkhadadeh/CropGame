@@ -7,21 +7,20 @@ public class controller_scr : MonoBehaviour {
 	public static int money;
 	public enum GameState {IN_GAME, IN_FADE, END};
 	GameState current_state;
-
 	public GameObject PlotController;
-	public enum RobotEvents {ROTATION_DEMAND, RIVER_MALFUNCTION, SHOP_SALE, A_FERT_PRICE_UP, TAX};
-	public int plant_demand;
-	public enum TaxType {ALL_CROPS_LESS, ALL_SEEDS_MORE};
+
 	public Transform LifeEventUI;
-	public RobotEvents current_event;
 	public Transform wrist_ui;
-	public TaxType tax;
+
+	public life_event_manager_scr LE_manager;
 
 	bool wrist_ui_open;
 	public bool life_events_open;
 
 	const int MAX_DAYS = 20;
 	int current_day;
+
+	bool dontGrow;
 
 	// Use this for initialization
 	void Start () {
@@ -30,28 +29,24 @@ public class controller_scr : MonoBehaviour {
 		current_state = GameState.IN_GAME;
 		life_events_open = false;
 		wrist_ui_open = false;
-		current_event = (RobotEvents)Random.Range(0,5);
+		dontGrow = false;
+		LE_manager.SelectEvent();
 	}
 
 	// Update is called once per frame
 	void Update () {
 		if(current_state == GameState.IN_GAME) {
 			wrist_ui_open = wrist_ui.gameObject.activeSelf;
+			//Open up life events UI
 			if(wrist_ui_open && life_events_open) {
-				wrist_ui.GetChild(0).GetChild(0).gameObject.SetActive(false);
-				for(int i = 1; i < 6; i++) {
-					if(i == (int)current_event + 1) {
-						if(!LifeEventUI.GetChild(i).gameObject.activeSelf)
-						LifeEventUI.GetChild(i).gameObject.SetActive(true);
-					}	else {
-						if(LifeEventUI.GetChild(i).gameObject.activeSelf) {
-							LifeEventUI.GetChild(i).gameObject.SetActive(false);
-						}
-					 }
-				}
+				LE_manager.ShowEvent();
 			}
+			// Open up inventory UI
 			if(wrist_ui_open && !life_events_open) {
 				wrist_ui.GetChild(0).GetChild(0).gameObject.SetActive(true);
+				for(int i = 1; i < 6; i++) {
+						LifeEventUI.GetChild(i).gameObject.SetActive(false);
+				}
 			}
 		}
 	}
@@ -61,13 +56,7 @@ public class controller_scr : MonoBehaviour {
 			for(int i = 0; i < PlotController.transform.childCount; i++) {
 				PlotController.transform.GetChild(i).GetComponent<plot_scr>().Grow();
 			}
-			current_event = (RobotEvents)Random.Range(0,5);
-			if(current_event == RobotEvents.TAX) {
-				tax = (TaxType)Random.Range(0,2);
-			}
-			if(current_event == RobotEvents.ROTATION_DEMAND) {
-				plant_demand = Random.Range(1,4);
-			}
+			LE_manager.SelectEvent();
 			current_day++;
 			if(current_day == MAX_DAYS) {
 				current_state = GameState.END;
@@ -92,4 +81,5 @@ public class controller_scr : MonoBehaviour {
 	public void GameOver() {
 		SceneManager.LoadScene("GameOver");
 	}
+
 }

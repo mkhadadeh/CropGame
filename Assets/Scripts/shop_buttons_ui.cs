@@ -6,7 +6,7 @@ public class shop_buttons_ui : MonoBehaviour
 {
     public player_inventory_values Customer;
     public UnityEngine.UI.Text[] buttonTexts;
-    public controller_scr GameControl;
+    public life_event_manager_scr LE_Control;
     // Tax info
     public bool plant_tax;
     public bool fert_tax;
@@ -25,19 +25,19 @@ public class shop_buttons_ui : MonoBehaviour
     }
 
     void Update() {
-      if(GameControl.current_event == controller_scr.RobotEvents.A_FERT_PRICE_UP) {
+      if(LE_Control.current_event == life_event_manager_scr.RobotEvents.A_FERT_PRICE_UP) {
         fert_tax = true;
       }
       else {
         fert_tax = false;
       }
-      if(GameControl.current_event == controller_scr.RobotEvents.TAX && GameControl.tax == controller_scr.TaxType.ALL_SEEDS_MORE) {
+      if(LE_Control.current_event == life_event_manager_scr.RobotEvents.TAX && LE_Control.tax == life_event_manager_scr.TaxType.ALL_SEEDS_MORE) {
         plant_tax = true;
       }
       else {
         plant_tax = false;
       }
-      if(GameControl.current_event == controller_scr.RobotEvents.SHOP_SALE) {
+      if(LE_Control.current_event == life_event_manager_scr.RobotEvents.SHOP_SALE) {
         shop_sale = true;
       }
       else {
