@@ -37,7 +37,7 @@ public class plot_scr : MonoBehaviour {
 		if(seed_type == 0) {
 			seed_type = plant_type;
 			var plant_seed = Resources.Load("Plants/plant" + plant_type.ToString() + "growth0");
-			current_plant = Instantiate(plant_seed, transform.position, Quaternion.identity) as GameObject;
+			current_plant = Instantiate(plant_seed, transform.position + (new Vector3(0f,0f,0f)), Quaternion.identity) as GameObject;
 			return true;
 		}
 		return false;
@@ -48,7 +48,7 @@ public class plot_scr : MonoBehaviour {
 			Destroy(current_plant);
 			growth++;
 			var plant = Resources.Load("Plants/plant" + seed_type.ToString() + "growth" + growth.ToString());
-			current_plant = Instantiate(plant, transform.position, Quaternion.identity) as GameObject;
+			current_plant = Instantiate(plant, transform.position + (new Vector3(0f,0f,0f)), Quaternion.identity) as GameObject;
 			if(growth == seed_type) {
 				fertilityScores[seed_type - 1] = false;
 				fertilityScores[seed_type % 3] = true;

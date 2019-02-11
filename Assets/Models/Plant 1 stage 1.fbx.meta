@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 20f11a1d946dab94f90041555ec700bf
+guid: 6c2780694846e4844ba628bbdc09fbfb
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -61,7 +61,8 @@ ModelImporter:
     400052: pCone2
     400054: //RootNode
     400056: pSphere1
-    2100000: lambert1
+    2100000: stem_mat
+    2100002: leaf_mat
     2300000: pasted__pasted__pasted__pasted__pSphere1
     2300002: pasted__pasted__pasted__pSphere1
     2300004: pasted__pasted__pasted__pSphere1 1
