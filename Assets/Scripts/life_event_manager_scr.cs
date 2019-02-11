@@ -15,6 +15,7 @@ public class life_event_manager_scr : MonoBehaviour {
 	public player_inventory_values player_vals;
 
 	public int river_button_pressed;
+	public bool river_problem_solved;
 	public int cost_for_m3sg = 300;
 
 	public controller_scr GameController;
@@ -22,6 +23,7 @@ public class life_event_manager_scr : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		river_button_pressed = 0;
+		river_problem_solved = true;
 	}
 
 	// Update is called once per frame
@@ -39,7 +41,7 @@ public class life_event_manager_scr : MonoBehaviour {
 					}
 					if(i == 2) {
 						LifeEventUI.GetChild(i).gameObject.SetActive(true);
-						for(int j = 0; j < 4; j++) {
+						for(int j = 0; j < 3; j++) {
 							if(j == river_button_pressed) {
 								LifeEventUI.GetChild(i).GetChild(j).gameObject.SetActive(true);
 							}
@@ -75,6 +77,7 @@ public class life_event_manager_scr : MonoBehaviour {
 		}
 		if(current_event == RobotEvents.RIVER_MALFUNCTION) {
 			river_button_pressed = 0;
+			river_problem_solved = false;
 		}
 		if(current_event == RobotEvents.ROTATION_DEMAND) {
 			plant_demand = Random.Range(1,4);
@@ -85,9 +88,11 @@ public class life_event_manager_scr : MonoBehaviour {
 		if(i == 2 && player_vals.MoneyReserve >= cost_for_m3sg) {
 			player_vals.MoneyReserve -= cost_for_m3sg;
 			river_button_pressed = i;
+			river_problem_solved = true;
 		}
 		else {
 			river_button_pressed = i;
+			river_problem_solved = false;
 		}
 	}
 }
