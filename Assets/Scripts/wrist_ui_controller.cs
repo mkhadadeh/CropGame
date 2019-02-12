@@ -10,7 +10,7 @@ public class wrist_ui_controller : MonoBehaviour {
 
     string[] item_names = {"Plant 1","Plant 2","Plant 3","Natural Fertilizer","Artificial Fertilizer"};
 
-    
+
 	// Use this for initialization
 	void Start () {
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class plot_scr : MonoBehaviour {
-	public Material[] fertilityMaterials;
+	public Texture[] fertilityMaterials;
 	public bool[] fertilityScores = {true, true, true}; // Of Elements A, B, C
 	public int seed_type; // Of Plants 1, 2, 3. 0 for no plant
 	public int growth;
@@ -13,12 +13,13 @@ public class plot_scr : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		art_fert_used = false;
-		fertilityMaterials = new Material[8];
+		fertilityMaterials = new Texture[8];
 		seed_type = 0;
 		growth = 0;
 		for(int i = 0; i < 8; i++) {
 			string path = "Materials/plot" + i.ToString();
-			fertilityMaterials[i] =  Resources.Load(path, typeof(Material)) as Material;
+			Texture tex = Resources.Load(path, typeof(Texture)) as Texture;
+			fertilityMaterials[i] =  tex;
 		}
 	}
 
@@ -29,7 +30,7 @@ public class plot_scr : MonoBehaviour {
 
 	void UpdateMaterial() {
 		int mat_num = ((fertilityScores[0] ? 1 : 0)* 4) + ((fertilityScores[1] ? 1 : 0) * 2) + (fertilityScores[2] ? 1 : 0);
-		GetComponent<MeshRenderer>().material = fertilityMaterials[mat_num];
+		GetComponent<MeshRenderer>().material.SetTexture("_MainTex", fertilityMaterials[mat_num]);
 	}
 
 	public bool Plant(int plant_type) {
