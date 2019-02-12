@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class plot_button_scr : MonoBehaviour {
-	GameObject playerObj;
+	public GameObject playerObj;
 	plot_scr plot;
 	// Use this for initialization
 	void Start () {
-		playerObj = GameObject.FindGameObjectWithTag("Player");
+		//playerObj = GameObject.FindGameObjectWithTag("Player");
 		plot = GetComponent<plot_scr>();
 	}
 

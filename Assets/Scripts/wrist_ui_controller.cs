@@ -28,13 +28,17 @@ public class wrist_ui_controller : MonoBehaviour {
 
     bool CheckRayCollision()
     {
+        RaycastHit hit;
         bool RayPermission = false;
         Vector3 WristPosition = transform.TransformDirection(Vector3.right);
-        Debug.DrawLine(transform.position, transform.position + WristPosition);
-        if (Physics.Raycast(transform.position, WristPosition, 1, 9))
+        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * 100, Color.yellow);
+        if (Physics.Raycast(transform.position, WristPosition, out hit, Mathf.Infinity))
         {
-            //Debug.Log("Open Menu!");
-            RayPermission = true;
+            if (hit.collider.tag == "Player")
+            {
+                //Debug.Log("Open Menu!");
+                RayPermission = true;
+            }
         }
         return RayPermission;
 
