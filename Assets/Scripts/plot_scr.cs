@@ -17,7 +17,7 @@ public class plot_scr : MonoBehaviour {
 		seed_type = 0;
 		growth = 0;
 		for(int i = 0; i < 8; i++) {
-			string path = "Materials/element" + i.ToString();
+			string path = "Materials/plot" + i.ToString();
 			fertilityMaterials[i] =  Resources.Load(path, typeof(Material)) as Material;
 		}
 	}
