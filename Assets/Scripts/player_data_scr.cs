@@ -10,7 +10,11 @@ public class player_data_scr : MonoBehaviour {
 	public player_inventory_values vals;
 	public life_event_manager_scr LE_Control;
 
-	float tax = 0.6f;
+    public GameObject[] SeedPacks;
+    public GameObject[] Fertilizers;
+    public GameObject Spade;
+
+    float tax = 0.6f;
 	float demand = 1.6f;
 	// Use this for initialization
 	void Start () {
@@ -20,7 +24,7 @@ public class player_data_scr : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
+        UpdateModels();
 	}
 
 	public void Harvested(int code) {
@@ -41,4 +45,45 @@ public class player_data_scr : MonoBehaviour {
 				break;
 		}
 	}
+
+    public void UpdateModels()
+    {
+        if(holding_state == State.FERTILIZER)
+        {
+            SeedPacks[0].SetActive(false);
+            SeedPacks[1].SetActive(false);
+            SeedPacks[2].SetActive(false);
+            Fertilizers[fertilizer - 1].SetActive(true);
+            Fertilizers[(fertilizer == 1) ? 1 : 0].SetActive(false);
+            Spade.SetActive(false);
+        }
+        else if (holding_state == State.SEED)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                if(i + 1 == seed_type)
+                {
+                    SeedPacks[i].SetActive(true);
+                }
+                else
+                {
+                    SeedPacks[i].SetActive(false);
+                }
+            }
+            Fertilizers[0].SetActive(false);
+            Fertilizers[1].SetActive(false);
+            Spade.SetActive(false);
+        }
+        else
+        {
+            SeedPacks[0].SetActive(false);
+            SeedPacks[1].SetActive(false);
+            SeedPacks[2].SetActive(false);
+            Fertilizers[0].SetActive(false);
+            Fertilizers[1].SetActive(false);
+            Spade.SetActive(true);
+        }
+    }
+
+
 }
