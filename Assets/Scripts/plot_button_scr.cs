@@ -35,6 +35,11 @@ public class plot_button_scr : MonoBehaviour {
 		else {
 			// TODO: Implement harvesting
 			int type = plot.Harvest();
+            if(type >= 10)
+            {
+                var coin_parts = Resources.Load("CoinExplosion");
+                Instantiate(coin_parts, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+            }
 			playerScr.Harvested(type);
 		}
 	}
