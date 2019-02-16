@@ -16,7 +16,7 @@ public class controller_scr : MonoBehaviour {
 
 	public life_event_manager_scr LE_manager;
 
-	bool wrist_ui_open;
+	public bool wrist_ui_open;
 	public bool life_events_open;
 
 	const int MAX_DAYS = 20;
@@ -39,15 +39,18 @@ public class controller_scr : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(current_state == GameState.IN_GAME) {
-			wrist_ui_open = wrist_ui.gameObject.activeSelf;
+			wrist_ui_open = wrist_ui.GetChild(0).gameObject.activeSelf;
 			//Open up life events UI
 			if(wrist_ui_open && life_events_open) {
-				LE_manager.ShowEvent();
+                wrist_ui.GetChild(0).GetChild(0).gameObject.SetActive(false);
+                wrist_ui.GetChild(0).GetChild(1).gameObject.SetActive(true);
+                LE_manager.ShowEvent();
 			}
 			// Open up inventory UI
 			if(wrist_ui_open && !life_events_open) {
 				wrist_ui.GetChild(0).GetChild(0).gameObject.SetActive(true);
-				for(int i = 1; i < 6; i++) {
+                wrist_ui.GetChild(0).GetChild(1).gameObject.SetActive(false);
+                for (int i = 1; i < 6; i++) {
 						LifeEventUI.GetChild(i).gameObject.SetActive(false);
 				}
 			}

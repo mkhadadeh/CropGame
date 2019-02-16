@@ -10,8 +10,12 @@ public class plot_scr : MonoBehaviour {
 	public GameObject current_plant;
 	public bool art_fert_used;
 
+    public GameObject parts;
+    public bool has_parts;
+
 	// Use this for initialization
 	void Start () {
+        has_parts = false;
 		art_fert_used = false;
 		fertilityMaterials = new Texture[8];
 		seed_type = 0;
@@ -26,6 +30,7 @@ public class plot_scr : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		UpdateMaterial();
+        UpdateParticles();
 	}
 
 	void UpdateMaterial() {
@@ -63,12 +68,21 @@ public class plot_scr : MonoBehaviour {
 			int seed_was = seed_type;
 			seed_type = 0;
 			Destroy(current_plant);
-		//}
-		if(growth == seed_was && seed_was != 0) {
+
+        if (has_parts)
+        {
+            Destroy(parts);
+            has_parts = false;
+        }
+        //}
+        if (growth == seed_was && seed_was != 0) {
 			growth = 0;
 			return seed_was * 10; // seed_type * 10 implies the fully grown plant has been harvested
 		}
 		growth = 0;
+
+        
+
 		return seed_was; // seed_type implies that only the seeds were harvested. 0 implies nothing was in the tile.
 	}
 
@@ -97,4 +111,14 @@ public class plot_scr : MonoBehaviour {
 			fertilityScores[Random.Range(0, num_of_depleted)] = true;
 		}
 	}
+
+    void UpdateParticles()
+    {
+        if(!has_parts && growth == seed_type && seed_type != 0)
+        {
+            var part_prefab = Resources.Load("GrownParts");
+            parts = (GameObject)Instantiate(part_prefab, transform.position, Quaternion.identity);
+            has_parts = true;
+        }
+    }
 }
