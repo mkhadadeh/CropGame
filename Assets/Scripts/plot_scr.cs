@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class plot_scr : MonoBehaviour {
-	public Texture[] fertilityMaterials;
+	public Material[] fertilityMaterials;
 	public bool[] fertilityScores = {true, true, true}; // Of Elements A, B, C
 	public int seed_type; // Of Plants 1, 2, 3. 0 for no plant
 	public int growth;
@@ -17,13 +17,13 @@ public class plot_scr : MonoBehaviour {
 	void Start () {
         has_parts = false;
 		art_fert_used = false;
-		fertilityMaterials = new Texture[8];
+		fertilityMaterials = new Material[8];
 		seed_type = 0;
 		growth = 0;
 		for(int i = 0; i < 8; i++) {
-			string path = "Materials/plot" + i.ToString();
-			Texture tex = Resources.Load(path, typeof(Texture)) as Texture;
-			fertilityMaterials[i] =  tex;
+			string path = "Materials/element" + i.ToString();
+			Material mat = Resources.Load(path, typeof(Material)) as Material;
+			fertilityMaterials[i] =  mat;
 		}
 	}
 
@@ -35,7 +35,7 @@ public class plot_scr : MonoBehaviour {
 
 	void UpdateMaterial() {
 		int mat_num = ((fertilityScores[0] ? 1 : 0)* 4) + ((fertilityScores[1] ? 1 : 0) * 2) + (fertilityScores[2] ? 1 : 0);
-		GetComponent<MeshRenderer>().material.SetTexture("_MainTex", fertilityMaterials[mat_num]);
+		GetComponent<MeshRenderer>().material = fertilityMaterials[mat_num];
 	}
 
 	public bool Plant(int plant_type) {
@@ -81,7 +81,7 @@ public class plot_scr : MonoBehaviour {
 		}
 		growth = 0;
 
-        
+
 
 		return seed_was; // seed_type implies that only the seeds were harvested. 0 implies nothing was in the tile.
 	}
