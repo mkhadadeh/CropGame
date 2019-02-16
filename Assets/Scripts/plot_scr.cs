@@ -10,8 +10,8 @@ public class plot_scr : MonoBehaviour {
 	public GameObject current_plant;
 	public bool art_fert_used;
 
-    public GameObject parts;
-    public bool has_parts;
+  public GameObject parts;
+  public bool has_parts;
 
 	// Use this for initialization
 	void Start () {
@@ -44,6 +44,8 @@ public class plot_scr : MonoBehaviour {
 			seed_type = plant_type;
 			var plant_seed = Resources.Load("Plants/plant" + plant_type.ToString() + "growth0");
 			current_plant = Instantiate(plant_seed, transform.position + (new Vector3(0f,0f,0f)), Quaternion.identity) as GameObject;
+			var poof_part_prefab = Resources.Load("PlantedParts");
+			Instantiate(poof_part_prefab, transform.position, Quaternion.identity);
 			return true;
 		}
 		return false;
