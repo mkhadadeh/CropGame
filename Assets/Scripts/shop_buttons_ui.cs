@@ -12,7 +12,7 @@ public class shop_buttons_ui : MonoBehaviour
     public bool fert_tax;
     public bool shop_sale;
 
-    string[] item_names = {"Plant 1","Plant 2","Plant 3","Natural Fertilizer","Artificial Fertilizer"};
+    string[] item_names = {"Gloob Vine","Kwoz Fruit Tree","Potato","Natural Fertilizer","Artificial Fertilizer"};
 
     float tax = 1.6f;
     float sale = 0.6f;
@@ -45,7 +45,7 @@ public class shop_buttons_ui : MonoBehaviour
       }
       for(int i = 0; i < 5; i++) {
         plantValues[i] = plantValuesOriginal[i] * ((plant_tax && i < 3)||(fert_tax && i == 4) ? tax : 1) * ((shop_sale) ? sale : 1);
-        buttonTexts[i].text = item_names[i] + ": " + plantValues[i].ToString();
+        buttonTexts[i].text = item_names[i] + "\n$" + plantValues[i].ToString();
       }
     }
 
