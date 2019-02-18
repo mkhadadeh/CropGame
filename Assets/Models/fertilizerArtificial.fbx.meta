@@ -65,7 +65,37 @@ ModelImporter:
     4300014: pCylinder5
     4300016: pasted__pCylinder5
     4300018: pasted__pCylinder5
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Element1_mat
+    second: {fileID: 2100000, guid: e40575bb3f8b2924b8a1e3375ef45fb7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Element2_mat
+    second: {fileID: 2100000, guid: 5491637f7f4a2c94e89191dd2b57953b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: element3_mat
+    second: {fileID: 2100000, guid: b22140e1f03ca73498b9561cdb72d4f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: handle_mat
+    second: {fileID: 2100000, guid: b7e5486a9d73e3546b5adcd7c389e2c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tank_mat
+    second: {fileID: 2100000, guid: c3cbbe13e07c0934e8f4155a5ddb2002, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trigger_mat
+    second: {fileID: 2100000, guid: 52335b9d99e0d274690b3aa9d37843ac, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

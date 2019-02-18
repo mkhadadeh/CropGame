@@ -44,7 +44,12 @@ ModelImporter:
     4300006: pasted__pCube1
     4300008: pCube2
     4300010: pasted__pCube2
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fence_mat
+    second: {fileID: 2100000, guid: 9a5cfa763eef1a743b793c1faff6c824, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
