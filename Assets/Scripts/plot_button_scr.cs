@@ -27,8 +27,10 @@ public class plot_button_scr : MonoBehaviour {
 		}
 		else if(playerScr.holding_state == player_data_scr.State.FERTILIZER) {
 			if(playerScr.fertilizer != 0) {
-					plot.Fertilize(playerScr.fertilizer == 1 ? false : true);
-			}
+				plot.Fertilize(playerScr.fertilizer == 1 ? false : true);
+                if (playerScr.fertilizer == 2) playerScr.AFertParts.GetComponent<art_fert_scr>().Spray();
+                
+            }
 			playerScr.holding_state = player_data_scr.State.NOTHING;
 			playerScr.fertilizer = 0;
 		}

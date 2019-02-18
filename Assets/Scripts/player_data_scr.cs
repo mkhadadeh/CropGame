@@ -16,6 +16,8 @@ public class player_data_scr : MonoBehaviour {
 
     float tax = 0.6f;
 	float demand = 1.6f;
+
+    public GameObject AFertParts;
 	// Use this for initialization
 	void Start () {
 		holding_state = State.NOTHING;
