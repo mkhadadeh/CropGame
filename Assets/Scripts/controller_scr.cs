@@ -28,9 +28,14 @@ public class controller_scr : MonoBehaviour {
     bool faded;
 	bool dontGrow;
 
+    bool life_events_seen;
+    public GameObject Warning_parts;
+    public GameObject cursor;
+
 	// Use this for initialization
 	void Start () {
-		money = 0;
+        life_events_seen = false;
+        money = 0;
         money_to_win = 15000;
 		current_day = 0;
 		current_state = GameState.IN_GAME;
@@ -45,6 +50,15 @@ public class controller_scr : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+        cursor.SetActive(true);
+        if(!life_events_seen)
+        {
+            Warning_parts.SetActive(true);
+        }
+        else
+        {
+            Warning_parts.SetActive(false);
+        }
 		if(current_state == GameState.IN_GAME) {
             wrist_ui_open = wrist_ui.GetChild(0).gameObject.activeSelf;
 			//Open up life events UI
@@ -64,6 +78,7 @@ public class controller_scr : MonoBehaviour {
 		}
         else if(current_state == GameState.IN_FADE)
         {
+            cursor.SetActive(false);
             if(fade_val < 3.0f && !faded)
             {
                 Debug.Log("Stage1");
@@ -92,13 +107,14 @@ public class controller_scr : MonoBehaviour {
                 faded = false;
                 FadePlane.SetActive(false);
                 fade_val = 0;
+                life_events_seen = false;
                 current_state = GameState.IN_GAME;
             }
         }
 	}
 
 	public void NextDay() {
-		if(current_state == GameState.IN_GAME) {
+        if (current_state == GameState.IN_GAME) {
 			if(LE_manager.river_problem_solved == false) {
 				dontGrow = true;
 				LE_manager.river_problem_solved = true;
@@ -119,13 +135,15 @@ public class controller_scr : MonoBehaviour {
 				current_state = GameState.END;
 				GameOver();
 			}
-			current_state = GameState.IN_FADE;
+            life_events_open = false;
+            current_state = GameState.IN_FADE;
 			//Fade();
 		}
 	}
 	public void LE_Open_Button() {
 		life_events_open = true;
-	}
+        life_events_seen = true;
+    }
 	public void LE_Close_Button() {
 		life_events_open = false;
 	}
