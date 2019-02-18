@@ -32,6 +32,8 @@ public class controller_scr : MonoBehaviour {
     public GameObject Warning_parts;
     public GameObject cursor;
 
+    public AudioSource[] LifeEventScripts;
+
 	// Use this for initialization
 	void Start () {
         life_events_seen = false;
@@ -129,13 +131,14 @@ public class controller_scr : MonoBehaviour {
 				}
 			}
 			dontGrow = false;
-			LE_manager.SelectEvent();
+            life_events_open = false;
+            LifeEventScripts[(int)LE_manager.current_event].Stop();
+            LE_manager.SelectEvent();
 			current_day++;
 			if(current_day == MAX_DAYS) {
 				current_state = GameState.END;
 				GameOver();
 			}
-            life_events_open = false;
             current_state = GameState.IN_FADE;
 			//Fade();
 		}
@@ -143,10 +146,12 @@ public class controller_scr : MonoBehaviour {
 	public void LE_Open_Button() {
 		life_events_open = true;
         life_events_seen = true;
+        LifeEventScripts[(int)LE_manager.current_event].Play();
     }
 	public void LE_Close_Button() {
 		life_events_open = false;
-	}
+        LifeEventScripts[(int)LE_manager.current_event].Stop();
+    }
 
 	void Fade() {
 		//TODO: Implement Fading
