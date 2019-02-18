@@ -200,7 +200,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 682900532}
+    m_TransformParent: {fileID: 850018040}
     m_Modifications:
     - target: {fileID: 224836254081382326, guid: cd8ae3bfe0bc9ab41bcc40b4712941c8,
         type: 2}
@@ -215,22 +215,22 @@ Prefab:
     - target: {fileID: 224836254081382326, guid: cd8ae3bfe0bc9ab41bcc40b4712941c8,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.8599999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224836254081382326, guid: cd8ae3bfe0bc9ab41bcc40b4712941c8,
         type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224836254081382326, guid: cd8ae3bfe0bc9ab41bcc40b4712941c8,
         type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224836254081382326, guid: cd8ae3bfe0bc9ab41bcc40b4712941c8,
         type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224836254081382326, guid: cd8ae3bfe0bc9ab41bcc40b4712941c8,
         type: 2}
@@ -295,21 +295,30 @@ Prefab:
     - target: {fileID: 224836254081382326, guid: cd8ae3bfe0bc9ab41bcc40b4712941c8,
         type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 224836254081382326, guid: cd8ae3bfe0bc9ab41bcc40b4712941c8,
         type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 224836254081382326, guid: cd8ae3bfe0bc9ab41bcc40b4712941c8,
         type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 1959362130217062, guid: cd8ae3bfe0bc9ab41bcc40b4712941c8, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114930793663561740, guid: cd8ae3bfe0bc9ab41bcc40b4712941c8,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Note: The potato is not sentient. The face it has on its
+
+        root is just a means to protect itself from herbivores,
+
+        similar to the faces on the wings of some insects.'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd8ae3bfe0bc9ab41bcc40b4712941c8, type: 2}
@@ -1207,6 +1216,16 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 9a95427af505da04d90a2960a1cd8572,
     type: 3}
   m_PrefabInternal: {fileID: 1603172900}
+--- !u!224 &245855144 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 224836254081382326, guid: cd8ae3bfe0bc9ab41bcc40b4712941c8,
+    type: 2}
+  m_PrefabInternal: {fileID: 46288636}
+--- !u!224 &251082723 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 224795913117061740, guid: f35c79a6c3c1a984b86dbea6aed4bc09,
+    type: 2}
+  m_PrefabInternal: {fileID: 788862383}
 --- !u!1 &278501305
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,6 +1691,58 @@ Prefab:
     - {fileID: 114197349617142730, guid: 277298a52a7db514f9e2f41573f645db, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 277298a52a7db514f9e2f41573f645db, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &388560954 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1129247524840550, guid: 1d35e32c9b6a9e54c820940257401276,
+    type: 2}
+  m_PrefabInternal: {fileID: 1246624286}
+--- !u!114 &388560959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 388560954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 850018039}
+          m_MethodName: ShowTip
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 4
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 850018039}
+          m_MethodName: HideTips
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &389899841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,6 +1754,7 @@ GameObject:
   - component: {fileID: 389899845}
   - component: {fileID: 389899844}
   - component: {fileID: 389899843}
+  - component: {fileID: 389899846}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -1796,6 +1868,53 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 389899841}
   m_CullTransparentMesh: 0
+--- !u!114 &389899846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 389899841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 850018039}
+          m_MethodName: ShowTip
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 6
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 850018039}
+          m_MethodName: HideTips
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1001 &392677605
 Prefab:
   m_ObjectHideFlags: 0
@@ -4396,12 +4515,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 554233283}
   m_CullTransparentMesh: 0
+--- !u!224 &556546388 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 224996014584930614, guid: 3929f0fa15566394697e6937ceacf8c7,
+    type: 2}
+  m_PrefabInternal: {fileID: 559125145}
 --- !u!1001 &559125145
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 682900532}
+    m_TransformParent: {fileID: 850018040}
     m_Modifications:
     - target: {fileID: 224996014584930614, guid: 3929f0fa15566394697e6937ceacf8c7,
         type: 2}
@@ -4416,22 +4540,22 @@ Prefab:
     - target: {fileID: 224996014584930614, guid: 3929f0fa15566394697e6937ceacf8c7,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.8599999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224996014584930614, guid: 3929f0fa15566394697e6937ceacf8c7,
         type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224996014584930614, guid: 3929f0fa15566394697e6937ceacf8c7,
         type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224996014584930614, guid: 3929f0fa15566394697e6937ceacf8c7,
         type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224996014584930614, guid: 3929f0fa15566394697e6937ceacf8c7,
         type: 2}
@@ -4496,17 +4620,17 @@ Prefab:
     - target: {fileID: 224996014584930614, guid: 3929f0fa15566394697e6937ceacf8c7,
         type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 224996014584930614, guid: 3929f0fa15566394697e6937ceacf8c7,
         type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 224996014584930614, guid: 3929f0fa15566394697e6937ceacf8c7,
         type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 1115061295253036, guid: 3929f0fa15566394697e6937ceacf8c7, type: 2}
       propertyPath: m_IsActive
@@ -4814,15 +4938,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4400555371356142, guid: b7e83cab8acfdce4aac638eefc426d08, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.4893634
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4400555371356142, guid: b7e83cab8acfdce4aac638eefc426d08, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.5983896
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4400555371356142, guid: b7e83cab8acfdce4aac638eefc426d08, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.5204755
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4400555371356142, guid: b7e83cab8acfdce4aac638eefc426d08, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4856,7 +4980,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4898436894066256, guid: b7e83cab8acfdce4aac638eefc426d08, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7e83cab8acfdce4aac638eefc426d08, type: 2}
@@ -9957,7 +10081,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 682900532}
+    m_TransformParent: {fileID: 850018040}
     m_Modifications:
     - target: {fileID: 224795913117061740, guid: f35c79a6c3c1a984b86dbea6aed4bc09,
         type: 2}
@@ -9972,22 +10096,22 @@ Prefab:
     - target: {fileID: 224795913117061740, guid: f35c79a6c3c1a984b86dbea6aed4bc09,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.86
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224795913117061740, guid: f35c79a6c3c1a984b86dbea6aed4bc09,
         type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224795913117061740, guid: f35c79a6c3c1a984b86dbea6aed4bc09,
         type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224795913117061740, guid: f35c79a6c3c1a984b86dbea6aed4bc09,
         type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224795913117061740, guid: f35c79a6c3c1a984b86dbea6aed4bc09,
         type: 2}
@@ -10052,17 +10176,17 @@ Prefab:
     - target: {fileID: 224795913117061740, guid: f35c79a6c3c1a984b86dbea6aed4bc09,
         type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 224795913117061740, guid: f35c79a6c3c1a984b86dbea6aed4bc09,
         type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 224795913117061740, guid: f35c79a6c3c1a984b86dbea6aed4bc09,
         type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 1675633663708066, guid: f35c79a6c3c1a984b86dbea6aed4bc09, type: 2}
       propertyPath: m_IsActive
@@ -10242,7 +10366,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 682900532}
+    m_TransformParent: {fileID: 850018040}
     m_Modifications:
     - target: {fileID: 224097241833712690, guid: cd2900d2049414247b3587a866c41d37,
         type: 2}
@@ -10257,22 +10381,22 @@ Prefab:
     - target: {fileID: 224097241833712690, guid: cd2900d2049414247b3587a866c41d37,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.8599999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224097241833712690, guid: cd2900d2049414247b3587a866c41d37,
         type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224097241833712690, guid: cd2900d2049414247b3587a866c41d37,
         type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224097241833712690, guid: cd2900d2049414247b3587a866c41d37,
         type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224097241833712690, guid: cd2900d2049414247b3587a866c41d37,
         type: 2}
@@ -10337,17 +10461,17 @@ Prefab:
     - target: {fileID: 224097241833712690, guid: cd2900d2049414247b3587a866c41d37,
         type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 224097241833712690, guid: cd2900d2049414247b3587a866c41d37,
         type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 224097241833712690, guid: cd2900d2049414247b3587a866c41d37,
         type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 1871168550541166, guid: cd2900d2049414247b3587a866c41d37, type: 2}
       propertyPath: m_IsActive
@@ -10536,6 +10660,54 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4208085254948038, guid: a5064291d99252646adaddf2093dd6e4,
     type: 2}
   m_PrefabInternal: {fileID: 847712072}
+--- !u!1 &850018038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 850018040}
+  - component: {fileID: 850018039}
+  m_Layer: 0
+  m_Name: TooltipController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &850018039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 850018038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0459167508a1c294db78a8af5c4e9333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointer: {fileID: 682900532}
+--- !u!4 &850018040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 850018038}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 251082723}
+  - {fileID: 1374214693}
+  - {fileID: 245855144}
+  - {fileID: 556546388}
+  - {fileID: 1070942092}
+  - {fileID: 1914988007}
+  - {fileID: 1749558745}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &877499545
 Prefab:
   m_ObjectHideFlags: 0
@@ -11100,7 +11272,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1278939575}
+        - m_Target: {fileID: 850018039}
           m_MethodName: ShowTip
           m_Mode: 3
           m_Arguments:
@@ -11117,7 +11289,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1278939575}
+        - m_Target: {fileID: 850018039}
           m_MethodName: HideTips
           m_Mode: 1
           m_Arguments:
@@ -11313,7 +11485,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1278939575}
+        - m_Target: {fileID: 850018039}
           m_MethodName: ShowTip
           m_Mode: 3
           m_Arguments:
@@ -11330,7 +11502,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1278939575}
+        - m_Target: {fileID: 850018039}
           m_MethodName: HideTips
           m_Mode: 1
           m_Arguments:
@@ -11365,7 +11537,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1278939575}
+        - m_Target: {fileID: 850018039}
           m_MethodName: ShowTip
           m_Mode: 3
           m_Arguments:
@@ -11382,7 +11554,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1278939575}
+        - m_Target: {fileID: 850018039}
           m_MethodName: HideTips
           m_Mode: 1
           m_Arguments:
@@ -11712,6 +11884,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 752398361}
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!224 &1070942092 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 224891136067104972, guid: 83763b6842ce404428d44baa14c19d83,
+    type: 2}
+  m_PrefabInternal: {fileID: 1106018507}
 --- !u!1 &1077503623 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 9a95427af505da04d90a2960a1cd8572,
@@ -11728,7 +11905,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 682900532}
+    m_TransformParent: {fileID: 850018040}
     m_Modifications:
     - target: {fileID: 224891136067104972, guid: 83763b6842ce404428d44baa14c19d83,
         type: 2}
@@ -11743,22 +11920,22 @@ Prefab:
     - target: {fileID: 224891136067104972, guid: 83763b6842ce404428d44baa14c19d83,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.8599999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224891136067104972, guid: 83763b6842ce404428d44baa14c19d83,
         type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224891136067104972, guid: 83763b6842ce404428d44baa14c19d83,
         type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224891136067104972, guid: 83763b6842ce404428d44baa14c19d83,
         type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224891136067104972, guid: 83763b6842ce404428d44baa14c19d83,
         type: 2}
@@ -11823,21 +12000,30 @@ Prefab:
     - target: {fileID: 224891136067104972, guid: 83763b6842ce404428d44baa14c19d83,
         type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 224891136067104972, guid: 83763b6842ce404428d44baa14c19d83,
         type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 224891136067104972, guid: 83763b6842ce404428d44baa14c19d83,
         type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 1720973585563026, guid: 83763b6842ce404428d44baa14c19d83, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114858977878190144, guid: 83763b6842ce404428d44baa14c19d83,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Warning: While artificial fertilizer is a quick way to
+
+        refertilize your soil pellets, it can effect water negatively.
+
+        Take care of the shared water source.'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83763b6842ce404428d44baa14c19d83, type: 2}
@@ -11936,7 +12122,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1278939575}
+        - m_Target: {fileID: 850018039}
           m_MethodName: ShowTip
           m_Mode: 3
           m_Arguments:
@@ -11953,7 +12139,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1278939575}
+        - m_Target: {fileID: 850018039}
           m_MethodName: HideTips
           m_Mode: 1
           m_Arguments:
@@ -12408,7 +12594,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 682900532}
+    m_TransformParent: {fileID: 850018040}
     m_Modifications:
     - target: {fileID: 224206192950227000, guid: 09653534ca1f31a41b6c9fd632884022,
         type: 2}
@@ -12423,22 +12609,22 @@ Prefab:
     - target: {fileID: 224206192950227000, guid: 09653534ca1f31a41b6c9fd632884022,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.8599999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224206192950227000, guid: 09653534ca1f31a41b6c9fd632884022,
         type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224206192950227000, guid: 09653534ca1f31a41b6c9fd632884022,
         type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224206192950227000, guid: 09653534ca1f31a41b6c9fd632884022,
         type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224206192950227000, guid: 09653534ca1f31a41b6c9fd632884022,
         type: 2}
@@ -12503,17 +12689,17 @@ Prefab:
     - target: {fileID: 224206192950227000, guid: 09653534ca1f31a41b6c9fd632884022,
         type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 224206192950227000, guid: 09653534ca1f31a41b6c9fd632884022,
         type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 224206192950227000, guid: 09653534ca1f31a41b6c9fd632884022,
         type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 1680449043793218, guid: 09653534ca1f31a41b6c9fd632884022, type: 2}
       propertyPath: m_IsActive
@@ -13252,22 +13438,6 @@ Transform:
   m_Father: {fileID: 1723585590}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1278939574 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1329497147184822, guid: b7e83cab8acfdce4aac638eefc426d08,
-    type: 2}
-  m_PrefabInternal: {fileID: 682900531}
---- !u!114 &1278939575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1278939574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0459167508a1c294db78a8af5c4e9333, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1291704591
 GameObject:
   m_ObjectHideFlags: 0
@@ -13447,7 +13617,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 682900532}
+    m_TransformParent: {fileID: 850018040}
     m_Modifications:
     - target: {fileID: 224249539781943808, guid: fc94767b70d39ae478476bd989b269a0,
         type: 2}
@@ -13462,22 +13632,22 @@ Prefab:
     - target: {fileID: 224249539781943808, guid: fc94767b70d39ae478476bd989b269a0,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.8599999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224249539781943808, guid: fc94767b70d39ae478476bd989b269a0,
         type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224249539781943808, guid: fc94767b70d39ae478476bd989b269a0,
         type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224249539781943808, guid: fc94767b70d39ae478476bd989b269a0,
         type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224249539781943808, guid: fc94767b70d39ae478476bd989b269a0,
         type: 2}
@@ -13542,17 +13712,17 @@ Prefab:
     - target: {fileID: 224249539781943808, guid: fc94767b70d39ae478476bd989b269a0,
         type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 224249539781943808, guid: fc94767b70d39ae478476bd989b269a0,
         type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 224249539781943808, guid: fc94767b70d39ae478476bd989b269a0,
         type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.03
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 1405221802096186, guid: fc94767b70d39ae478476bd989b269a0, type: 2}
       propertyPath: m_IsActive
@@ -13813,6 +13983,7 @@ GameObject:
   - component: {fileID: 1339490647}
   - component: {fileID: 1339490646}
   - component: {fileID: 1339490645}
+  - component: {fileID: 1339490648}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -13926,6 +14097,53 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1339490643}
   m_CullTransparentMesh: 0
+--- !u!114 &1339490648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1339490643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 850018039}
+          m_MethodName: ShowTip
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 5
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 850018039}
+          m_MethodName: HideTips
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1001 &1353379455
 Prefab:
   m_ObjectHideFlags: 0
@@ -14032,6 +14250,63 @@ MonoBehaviour:
     m_Bits: 32
   pointer: {fileID: 0}
   sortOrder: 0
+--- !u!224 &1374214693 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 224249539781943808, guid: fc94767b70d39ae478476bd989b269a0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1293245518}
+--- !u!1 &1391741312 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1892701746830504, guid: 1d35e32c9b6a9e54c820940257401276,
+    type: 2}
+  m_PrefabInternal: {fileID: 1246624286}
+--- !u!114 &1391741317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1391741312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 850018039}
+          m_MethodName: ShowTip
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 850018039}
+          m_MethodName: HideTips
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1001 &1391972277
 Prefab:
   m_ObjectHideFlags: 0
@@ -14407,6 +14682,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1482847460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1187148086642670, guid: 1d35e32c9b6a9e54c820940257401276,
+    type: 2}
+  m_PrefabInternal: {fileID: 1246624286}
+--- !u!114 &1482847465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1482847460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 850018039}
+          m_MethodName: ShowTip
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 850018039}
+          m_MethodName: HideTips
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1001 &1486444303
 Prefab:
   m_ObjectHideFlags: 0
@@ -15970,6 +16297,58 @@ MonoBehaviour:
     m_Bits: 32
   pointer: {fileID: 0}
   sortOrder: 0
+--- !u!1 &1656581626 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1735974534775944, guid: 1d35e32c9b6a9e54c820940257401276,
+    type: 2}
+  m_PrefabInternal: {fileID: 1246624286}
+--- !u!114 &1656581631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1656581626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 850018039}
+          m_MethodName: ShowTip
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 850018039}
+          m_MethodName: HideTips
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1663707877
 GameObject:
   m_ObjectHideFlags: 0
@@ -16060,7 +16439,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1278939575}
+        - m_Target: {fileID: 850018039}
           m_MethodName: ShowTip
           m_Mode: 3
           m_Arguments:
@@ -16077,7 +16456,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1278939575}
+        - m_Target: {fileID: 850018039}
           m_MethodName: HideTips
           m_Mode: 1
           m_Arguments:
@@ -16362,6 +16741,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1746635597}
   m_CullTransparentMesh: 0
+--- !u!224 &1749558745 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 224097241833712690, guid: cd2900d2049414247b3587a866c41d37,
+    type: 2}
+  m_PrefabInternal: {fileID: 838242293}
 --- !u!114 &1781211965 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114387152138966662, guid: 9a0678c23db9ce34f9c761ef0b300d64,
@@ -17491,6 +17875,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1907693144}
   m_CullTransparentMesh: 0
+--- !u!224 &1914988007 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 224206192950227000, guid: 09653534ca1f31a41b6c9fd632884022,
+    type: 2}
+  m_PrefabInternal: {fileID: 1187204561}
 --- !u!1 &1917513836
 GameObject:
   m_ObjectHideFlags: 0
@@ -18307,6 +18696,58 @@ Transform:
   m_Father: {fileID: 546378018}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2082129630 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1824235478372654, guid: 1d35e32c9b6a9e54c820940257401276,
+    type: 2}
+  m_PrefabInternal: {fileID: 1246624286}
+--- !u!114 &2082129635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2082129630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 850018039}
+          m_MethodName: ShowTip
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 850018039}
+          m_MethodName: HideTips
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &2087665216
 GameObject:
   m_ObjectHideFlags: 0
