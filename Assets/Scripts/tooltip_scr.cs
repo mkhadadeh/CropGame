@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class tooltip_scr : MonoBehaviour {
     public Transform pointer;
+    public Transform playerEye;
     int show;
 	// Use this for initialization
 	void Start () {
@@ -12,7 +13,7 @@ public class tooltip_scr : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position = pointer.position + new Vector3(-1.0f,0f,0f);
+        transform.position = ((pointer.position - playerEye.position) * 0.8f) + playerEye.position;
         Vector3 eulerRotation = new Vector3(pointer.transform.eulerAngles.x, pointer.transform.eulerAngles.y, pointer.transform.eulerAngles.z);
         transform.rotation = Quaternion.Euler(eulerRotation);
         if (show == -1)
