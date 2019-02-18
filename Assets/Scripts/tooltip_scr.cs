@@ -26,7 +26,6 @@ public class tooltip_scr : MonoBehaviour {
         else
         {
             transform.GetChild(show).gameObject.SetActive(true);
-            Debug.Log(transform.GetChild(show).gameObject);
         }
     }
 

@@ -7,7 +7,7 @@ public class wrist_ui_controller : MonoBehaviour {
     public GameObject WristDisplay;
     public player_inventory_values PlayerVals;
     public player_data_scr PlayerHoldingVals;
-
+    public controller_scr GameControl;
 
 	// Use this for initialization
 	void Start () {
@@ -51,6 +51,7 @@ public class wrist_ui_controller : MonoBehaviour {
             BtnText.text = PlayerVals.AmountOfItems[i - 1].ToString();
         }
         transform.GetChild(0).GetChild(0).GetChild(6).gameObject.GetComponentInChildren<UnityEngine.UI.Text>().text  = PlayerVals.MoneyReserve.ToString();
+        transform.GetChild(0).GetChild(0).GetChild(16).gameObject.GetComponentInChildren<UnityEngine.UI.Text>().text = "Day: " + (GameControl.current_day + 1).ToString() + "/" + controller_scr.MAX_DAYS.ToString();
 
     }
 

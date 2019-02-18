@@ -316,9 +316,9 @@ Prefab:
       propertyPath: m_Text
       value: 'Note: The potato is not sentient. The face it has on its
 
-        root is just a means to protect itself from herbivores,
+        root is just a means to scare away herbivores,
 
-        similar to the faces on the wings of some insects.'
+        similar to the faces on the wings of some moths.'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd8ae3bfe0bc9ab41bcc40b4712941c8, type: 2}
@@ -3270,6 +3270,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0242aa8515b4bc947a945a5c6df83ee9, type: 2}
   m_IsPrefabAsset: 0
+--- !u!4 &419540221 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400012, guid: ce816f2e6abb0504092c23ed9b970dfd,
+    type: 2}
+  m_PrefabInternal: {fileID: 906019998}
 --- !u!1 &427584793 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1840295360834218, guid: 277298a52a7db514f9e2f41573f645db,
@@ -3298,6 +3303,85 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 9a95427af505da04d90a2960a1cd8572,
     type: 3}
   m_PrefabInternal: {fileID: 1988605169}
+--- !u!1 &441181912
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1073268802821862, guid: 1d35e32c9b6a9e54c820940257401276,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 441181913}
+  - component: {fileID: 441181915}
+  - component: {fileID: 441181914}
+  m_Layer: 5
+  m_Name: Text (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &441181913
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 224150884645329862, guid: 1d35e32c9b6a9e54c820940257401276,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 441181912}
+  m_LocalRotation: {x: -0, y: 0.000000021073424, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1.0051028, y: 0.9944974, z: 1.0000013}
+  m_Children: []
+  m_Father: {fileID: 1943004398}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 31.249992, y: 137}
+  m_SizeDelta: {x: -549.30005, y: -289.40704}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &441181914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114310900840459554, guid: 1d35e32c9b6a9e54c820940257401276,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 441181912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 4ecf156173ddc264797ceffaf89bce76, type: 3}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 168
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Day: /20'
+--- !u!222 &441181915
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 222208363967073186, guid: 1d35e32c9b6a9e54c820940257401276,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 441181912}
+  m_CullTransparentMesh: 0
 --- !u!1001 &444040733
 Prefab:
   m_ObjectHideFlags: 0
@@ -4764,7 +4848,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 616369265}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1331165945}
@@ -10688,6 +10772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointer: {fileID: 682900532}
+  playerEye: {fileID: 419540221}
 --- !u!4 &850018040
 Transform:
   m_ObjectHideFlags: 0
@@ -12877,7 +12962,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1776205249885184, guid: 1d35e32c9b6a9e54c820940257401276, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4236216491125216, guid: 1d35e32c9b6a9e54c820940257401276, type: 2}
       propertyPath: m_LocalRotation.x
@@ -13346,6 +13431,11 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114822847351400242, guid: 1d35e32c9b6a9e54c820940257401276,
+        type: 2}
+      propertyPath: GameControl
+      value: 
+      objectReference: {fileID: 1481179633}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d35e32c9b6a9e54c820940257401276, type: 2}
   m_IsPrefabAsset: 0
@@ -13415,7 +13505,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 418176468}
+  - {fileID: 136010426}
   - {fileID: 687854100}
   - {fileID: 1930040595}
   - {fileID: 1567324018}
@@ -13431,9 +13521,9 @@ Transform:
   - {fileID: 504865419}
   - {fileID: 460746777}
   - {fileID: 444040734}
+  - {fileID: 418176468}
   - {fileID: 404794449}
   - {fileID: 176495221}
-  - {fileID: 136010426}
   - {fileID: 1544351654}
   m_Father: {fileID: 1723585590}
   m_RootOrder: 1
@@ -14669,6 +14759,7 @@ MonoBehaviour:
   LE_manager: {fileID: 1570523343}
   wrist_ui_open: 0
   life_events_open: 0
+  current_day: 0
 --- !u!4 &1481179634
 Transform:
   m_ObjectHideFlags: 0
@@ -15058,7 +15149,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1570523336
 RectTransform:
   m_ObjectHideFlags: 0

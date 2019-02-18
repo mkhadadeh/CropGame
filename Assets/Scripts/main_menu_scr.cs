@@ -18,5 +18,9 @@ public class main_menu_scr : MonoBehaviour {
 	public void PlayGame() {
 		SceneManager.LoadScene("MainScene");
 	}
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 
 }

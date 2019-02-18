@@ -19,9 +19,12 @@ public class controller_scr : MonoBehaviour {
 	public bool wrist_ui_open;
 	public bool life_events_open;
 
-	const int MAX_DAYS = 20;
-	int current_day;
+	public const int MAX_DAYS = 20;
+	public int current_day;
 
+    public GameObject FadePlane;
+    float fade_val;
+    bool faded;
 	bool dontGrow;
 
 	// Use this for initialization
@@ -33,13 +36,15 @@ public class controller_scr : MonoBehaviour {
 		wrist_ui_open = false;
 		dontGrow = false;
 		artificial_fertilizer_uses = 0;
+        fade_val = 0;
 		LE_manager.SelectEvent();
+        faded = false;
 	}
 
 	// Update is called once per frame
 	void Update () {
 		if(current_state == GameState.IN_GAME) {
-			wrist_ui_open = wrist_ui.GetChild(0).gameObject.activeSelf;
+            wrist_ui_open = wrist_ui.GetChild(0).gameObject.activeSelf;
 			//Open up life events UI
 			if(wrist_ui_open && life_events_open) {
                 wrist_ui.GetChild(0).GetChild(0).gameObject.SetActive(false);
@@ -55,6 +60,39 @@ public class controller_scr : MonoBehaviour {
 				}
 			}
 		}
+        else if(current_state == GameState.IN_FADE)
+        {
+            if(fade_val < 3.0f && !faded)
+            {
+                Debug.Log("Stage1");
+                FadePlane.SetActive(true);
+                fade_val += Time.deltaTime;
+                var alphaColor = FadePlane.GetComponent<MeshRenderer>().material.color;
+                alphaColor.a = 1.0f;
+                FadePlane.GetComponent<MeshRenderer>().material.color = Color.Lerp(FadePlane.GetComponent<MeshRenderer>().material.color, alphaColor, 1.0f * Time.deltaTime);
+            }
+            else if (fade_val >= 3.0f && !faded)
+            {
+                Debug.Log("Stage2");
+                faded = true;
+            }
+            else if(fade_val > 0f && faded)
+            {
+                fade_val -= Time.deltaTime;
+                Debug.Log("Stage3");
+                var alphaColor = FadePlane.GetComponent<MeshRenderer>().material.color;
+                alphaColor.a = 0f;
+                FadePlane.GetComponent<MeshRenderer>().material.color = Color.Lerp(FadePlane.GetComponent<MeshRenderer>().material.color, alphaColor, 3.0f * Time.deltaTime);
+            }
+            else if(fade_val <= 0f && faded)
+            {
+                Debug.Log("Stage4");
+                faded = false;
+                FadePlane.SetActive(false);
+                fade_val = 0;
+                current_state = GameState.IN_GAME;
+            }
+        }
 	}
 
 	public void NextDay() {
@@ -80,7 +118,7 @@ public class controller_scr : MonoBehaviour {
 				GameOver();
 			}
 			current_state = GameState.IN_FADE;
-			Fade();
+			//Fade();
 		}
 	}
 	public void LE_Open_Button() {
@@ -92,7 +130,7 @@ public class controller_scr : MonoBehaviour {
 
 	void Fade() {
 		//TODO: Implement Fading
-		current_state = GameState.IN_GAME;
+		//current_state = GameState.IN_GAME;
 	}
 
 	public void GameOver() {
