@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class controller_scr : MonoBehaviour {
 	public static int money;
+    public static int money_to_win;
 	public enum GameState {IN_GAME, IN_FADE, END};
 	GameState current_state;
 	public GameObject PlotController;
@@ -30,6 +31,7 @@ public class controller_scr : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		money = 0;
+        money_to_win = 15000;
 		current_day = 0;
 		current_state = GameState.IN_GAME;
 		life_events_open = false;
