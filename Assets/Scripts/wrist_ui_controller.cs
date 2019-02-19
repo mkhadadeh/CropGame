@@ -52,6 +52,7 @@ public class wrist_ui_controller : MonoBehaviour {
         }
         transform.GetChild(0).GetChild(0).GetChild(6).gameObject.GetComponentInChildren<UnityEngine.UI.Text>().text  = PlayerVals.MoneyReserve.ToString();
         transform.GetChild(0).GetChild(0).GetChild(16).gameObject.GetComponentInChildren<UnityEngine.UI.Text>().text = "Day: " + (GameControl.current_day + 1).ToString() + "/" + controller_scr.MAX_DAYS.ToString();
+        transform.GetChild(0).GetChild(0).GetChild(17).gameObject.GetComponentInChildren<UnityEngine.UI.Text>().text = "Goal: $" + controller_scr.money_to_win.ToString();
 
     }
 
