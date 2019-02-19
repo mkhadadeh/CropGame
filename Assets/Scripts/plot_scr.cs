@@ -95,6 +95,10 @@ public class plot_scr : MonoBehaviour {
 			fertilityScores[1] = true;
 			fertilityScores[2] = true;
 		}
+		else {
+			var poof_part_prefab = Resources.Load("PlantedParts");
+			Instantiate(poof_part_prefab, transform.position, Quaternion.identity);
+		}
 		int num_of_depleted = 0;
 		for(int i = 0; i < 3; i++) {
 			if(!fertilityScores[i]) {
