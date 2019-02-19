@@ -140,7 +140,6 @@ public class controller_scr : MonoBehaviour {
 				GameOver();
 			}
             current_state = GameState.IN_FADE;
-			//Fade();
 		}
 	}
 	public void LE_Open_Button() {
@@ -153,10 +152,10 @@ public class controller_scr : MonoBehaviour {
         LifeEventScripts[(int)LE_manager.current_event].Stop();
     }
 
-	void Fade() {
-		//TODO: Implement Fading
-		//current_state = GameState.IN_GAME;
-	}
+    public void Exit()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 
 	public void GameOver() {
 		SceneManager.LoadScene("GameOver");

@@ -18,13 +18,19 @@ public class life_event_manager_scr : MonoBehaviour {
 	public bool river_problem_solved;
 	public int cost_for_m3sg = 300;
 
+    string[] plantNames;
+
 	public controller_scr GameController;
 
 	// Use this for initialization
 	void Start () {
 		river_button_pressed = 0;
 		river_problem_solved = true;
-	}
+        plantNames = new string[3];
+        plantNames[0] = "Gloob Vine";
+        plantNames[1] = "Kwoz Fruit Tree";
+        plantNames[2] = "Potato";
+    }
 
 	// Update is called once per frame
 	void Update () {
@@ -37,7 +43,7 @@ public class life_event_manager_scr : MonoBehaviour {
 			if(i == (int)current_event + 1) {
 				if(!LifeEventUI.GetChild(i).gameObject.activeSelf || current_event == RobotEvents.RIVER_MALFUNCTION){
 					if(i == 1) {
-						LifeEventUI.GetChild(i).GetChild(2).GetComponent<UnityEngine.UI.Text>().text = "Plant in demand: " + plant_demand.ToString();
+						LifeEventUI.GetChild(i).GetChild(2).GetComponent<UnityEngine.UI.Text>().text = "Plant in demand: " + plantNames[plant_demand-1].ToString();
 					}
 					if(i == 2) {
 						LifeEventUI.GetChild(i).gameObject.SetActive(true);
