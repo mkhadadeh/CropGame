@@ -53,10 +53,12 @@ namespace OculusSampleFramework
         // Use this for initialization
         void Start()
         {
+            /*
             DebugUIBuilder.instance.AddLabel("Distance Grab Sample");
             DebugUIBuilder.instance.AddToggle("Use Spherecasting", ToggleSphereCasting, m_useSpherecast);
             DebugUIBuilder.instance.AddToggle("Grab Through Walls", ToggleGrabThroughWalls, m_allowGrabThroughWalls);
             DebugUIBuilder.instance.Show();
+            */
         }
 
         public void ToggleSphereCasting(Toggle t)
