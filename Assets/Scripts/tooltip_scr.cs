@@ -13,9 +13,12 @@ public class tooltip_scr : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        // Tooltips move
+        /*
         transform.position = ((pointer.position - playerEye.position) * 0.8f) + playerEye.position;
         Vector3 eulerRotation = new Vector3(pointer.transform.eulerAngles.x, pointer.transform.eulerAngles.y, pointer.transform.eulerAngles.z);
         transform.rotation = Quaternion.Euler(eulerRotation);
+        */
         if (show == -1)
         {
             for (int i = 0; i < 7; i++)
