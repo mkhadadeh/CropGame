@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -94,6 +95,13 @@ public class controller_scr : MonoBehaviour {
             {
                 Debug.Log("Stage2");
                 faded = true;
+                for (int i = 0; i < PlotController.transform.childCount; i++)
+                {
+                    if (!dontGrow)
+                    {
+                        PlotController.transform.GetChild(i).GetComponent<plot_scr>().Grow();
+                    }
+                }
             }
             else if(fade_val > 0f && faded)
             {
@@ -122,9 +130,9 @@ public class controller_scr : MonoBehaviour {
 				LE_manager.river_problem_solved = true;
 			}
 			for(int i = 0; i < PlotController.transform.childCount; i++) {
-				if(!dontGrow) {
-					PlotController.transform.GetChild(i).GetComponent<plot_scr>().Grow();
-				}
+				//if(!dontGrow) {
+					//PlotController.transform.GetChild(i).GetComponent<plot_scr>().Grow();
+				//}
 				if(PlotController.transform.GetChild(i).GetComponent<plot_scr>().art_fert_used) {
 					PlotController.transform.GetChild(i).GetComponent<plot_scr>().art_fert_used = false;
 					artificial_fertilizer_uses += 1;

@@ -2288,6 +2288,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 850018039}
+        m_MethodName: HideTips
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &389899844
@@ -16841,7 +16852,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Time to grow: 2 day'
+  m_Text: 'Time to grow: 2 days'
 --- !u!222 &986020056
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17024,7 +17035,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Time to grow: 2 day'
+  m_Text: 'Time to grow: 3 days'
 --- !u!222 &1014288414
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24660,6 +24671,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 692112762}
         m_MethodName: Press
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 850018039}
+        m_MethodName: HideTips
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
