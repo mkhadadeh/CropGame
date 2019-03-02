@@ -18,11 +18,18 @@ public class plot_button_scr : MonoBehaviour {
 
 	public void OnPress() {
 		var playerScr = playerObj.GetComponent<player_data_scr>();
+        var playerInv = playerObj.GetComponent<player_inventory_values>();
 
 		if(playerScr.holding_state == player_data_scr.State.SEED) {
 			if(plot.Plant(playerScr.seed_type)) {
-				playerScr.seed_type = 0;
-				playerScr.holding_state = player_data_scr.State.NOTHING;
+                if (!(playerInv.AmountOfItems[playerScr.seed_type - 1] > 0)) {
+                    playerScr.seed_type = 0;
+                    playerScr.holding_state = player_data_scr.State.NOTHING;
+                }
+                else
+                {
+                    playerInv.AmountOfItems[playerScr.seed_type - 1]--;
+                }
 			}
 		}
 		else if(playerScr.holding_state == player_data_scr.State.FERTILIZER) {
@@ -31,9 +38,15 @@ public class plot_button_scr : MonoBehaviour {
                 if (playerScr.fertilizer == 2) playerScr.AFertParts.GetComponent<art_fert_scr>().Spray();
                 
             }
-			playerScr.holding_state = player_data_scr.State.NOTHING;
-			playerScr.fertilizer = 0;
-		}
+            if (!(playerInv.AmountOfItems[playerScr.fertilizer + 2] > 0)) {
+                playerScr.holding_state = player_data_scr.State.NOTHING;
+                playerScr.fertilizer = 0;
+            }
+            else
+            {
+                playerInv.AmountOfItems[playerScr.fertilizer + 2]--;
+            }
+        }
 		else {
 			// TODO: Implement harvesting
 			int type = plot.Harvest();

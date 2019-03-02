@@ -102,6 +102,7 @@ public class controller_scr : MonoBehaviour {
                         PlotController.transform.GetChild(i).GetComponent<plot_scr>().Grow();
                     }
                 }
+                dontGrow = false;
             }
             else if(fade_val > 0f && faded)
             {
@@ -138,7 +139,6 @@ public class controller_scr : MonoBehaviour {
 					artificial_fertilizer_uses += 1;
 				}
 			}
-			dontGrow = false;
             life_events_open = false;
             LifeEventScripts[(int)LE_manager.current_event].Stop();
             LE_manager.SelectEvent();

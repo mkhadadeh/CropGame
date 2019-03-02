@@ -88,15 +88,16 @@ public class life_event_manager_scr : MonoBehaviour {
 		if(current_event == RobotEvents.ROTATION_DEMAND) {
 			plant_demand = Random.Range(1,4);
 		}
-	}
+    }
 	public void ButtonPress(int i) {
 		Debug.Log(i);
+        river_problem_solved = false;
 		if(i == 2 && player_vals.MoneyReserve >= cost_for_m3sg) {
 			player_vals.MoneyReserve -= cost_for_m3sg;
 			river_button_pressed = i;
 			river_problem_solved = true;
 		}
-		else {
+		else if(i == 1) {
 			river_button_pressed = i;
 			river_problem_solved = false;
 		}
