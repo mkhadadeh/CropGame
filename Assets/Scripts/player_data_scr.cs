@@ -27,6 +27,24 @@ public class player_data_scr : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         UpdateModels();
+
+        // Press B
+        if(OVRInput.GetDown(OVRInput.Button.Two))
+        {
+            if(holding_state != State.NOTHING)
+            {
+                if(holding_state == State.FERTILIZER)
+                {
+                    vals.AmountOfItems[fertilizer + 2]++;
+                }
+                else
+                {
+                    vals.AmountOfItems[seed_type - 1]++;
+                }
+            }
+            holding_state = State.NOTHING;
+        }
+
 	}
 
 	public void Harvested(int code) {
